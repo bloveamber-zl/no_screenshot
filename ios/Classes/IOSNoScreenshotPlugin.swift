@@ -140,10 +140,10 @@ public class IOSNoScreenshotPlugin: NSObject, FlutterPlugin, FlutterStreamHandle
             "was_screenshot_taken": !screenshotData.isEmpty
         ]
         let jsonString = convertMapToJsonString(map)
-        if lastSharedPreferencesState != jsonString {
+        // if lastSharedPreferencesState != jsonString {
             hasSharedPreferencesChanged = true
             lastSharedPreferencesState = jsonString
-        }
+        // }
     }
 
     private func convertMapToJsonString(_ map: [String: Any]) -> String {
